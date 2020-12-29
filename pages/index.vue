@@ -1,89 +1,138 @@
 <template>
+ <v-container class="">
+  <v-card class="grey darken-2 bg" height="250px" elevation="0"></v-card>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
+
+      <div class="d-flex justify-center my-12">
+       <v-img src="/logos/dracul.svg" contain max-width="600px"></v-img>
       </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
+
+      <v-card class="mt-12 transparent elevation-0">
         <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
+          <h1 class="black--text text-center">
+          {{$t("homepage.title")}}
+          </h1>
         </v-card-text>
-        <v-card-actions>
-          <v-spacer />
+        <v-card-text>
+          <p class="black--text justified">
+            {{$t("homepage.description")}}
+            <br><br>
+            {{$t("homepage.description2")}}
+          </p>
+        </v-card-text>
+        <v-card-actions class="d-flex justify-center">
           <v-btn
             color="primary"
+            width="130px"
             nuxt
-            to="/inspire"
+            to="/docs"
           >
-            Continue
+            {{$t("homepage.getStarted")}}
+          </v-btn>
+          <v-btn
+            color="primary"
+            width="130px"
+            nuxt
+            href="https://github.com/draculjs"
+            target="_blank"
+          >
+            GitHub
           </v-btn>
         </v-card-actions>
+
       </v-card>
     </v-col>
   </v-row>
+  <modules></modules>
+  <v-row>
+    <v-card class="justify-center align-center mt-10 transparent elevation-0" width="100%">
+      <v-card-title primary-title class="justify-center">
+        <div>
+          <h1 class="section ">Stack</h1>
+        </div>
+      </v-card-title>
+      <v-card name class="d-flex transparent elevation-0 justify-space-around align-center wrap mt-10">
+        <h2>Frontend:</h2>
+        <v-img src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img>
+        <v-img src="/logos/Vue.svg.png" height="120px" contain max-width="120px"></v-img>
+        <v-img src="/logos/vuetify.png" height="120px" contain max-width="120px"></v-img>
+        <v-img src="/logos/graphql.png" height="120px" contain max-width="120px"></v-img>
+        <v-img src="/logos/apollo.png" height="120px" contain max-width="120px"></v-img>
+      </v-card>
+      <v-card name class="d-flex transparent elevation-0 justify-space-around align-center wrap my-10">
+        <h2>Backend:</h2>
+        <v-img src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img>
+        <v-img src="/logos/nodejs.png" height="120px" contain max-width="120px"></v-img>
+        <v-card class="transparent elevation-0" height="120px"> 
+          <v-img src="/logos/express.png" height="50px"  max-width="120px"></v-img>
+          <v-img src="/logos/mongoose.png" height="60px"  max-width="120px"></v-img>
+        </v-card>
+        <v-img src="/logos/graphql.png" height="120px" contain max-width="120px"></v-img>
+        <v-img src="/logos/apollo.png" height="120px" contain max-width="120px"></v-img>
+      </v-card>
+      <v-card name class="d-flex transparent elevation-0 justify-space-around align-center wrap my-10">
+        <h2>Database:</h2>
+        <v-img class="" src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img>
+        <v-img class="" src="/logos/MongoDBs.png" height="120px" contain max-width="120px"></v-img>
+        <v-img src="" height="120px" contain max-width="120px"></v-img>
+        <v-img src="" height="120px" contain max-width="120px"></v-img>
+        <v-img src="" height="120px" contain max-width="120px"></v-img>
+      </v-card>
+    </v-card>
+  </v-row>
+  <v-row>
+    <v-card class="justify-center align-center transparent elevation-0" width="100%">
+      <v-card-title primary-title class=" justify-center">
+        <div>
+          <h1 class="section">Sponsors</h1>
+        </div>
+      </v-card-title>
+      <v-card class="transparent elevation-0">
+        <v-img class="my-10" src="/logos/sondeos.svg" height="150px" contain></v-img>
+      </v-card>
+    </v-card>
+  </v-row>
+</v-container>
+
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+
+components: {
+  modules: () => import('~/components/Modules.vue')
+}
 
 export default {
-  components: {
-    Logo,
-    VuetifyLogo
-  }
+
 }
 </script>
+
+<style>
+.container{
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+  background-color: rgba(58, 55, 55, 0.137);
+}
+main{
+  background-color:rgba(141, 137, 137, 0.137);
+}
+video{
+  margin: 10%;
+}
+.section{
+  font-size: 70px;
+  margin: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:300;
+  color: rgb(94, 15, 15);
+}
+.justified{
+  text-justify: distribute;
+  text-align: justify;
+}
+.bg{
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Bat_shadow_black.svg/1280px-Bat_shadow_black.svg.png") no-repeat center top;
+}
+</style>

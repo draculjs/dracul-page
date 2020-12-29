@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-
+import messages from "./i18n/messages"
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -36,10 +36,20 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-  ],
+  modules:
+    [
+    'nuxt-i18n',
+    ],
+
+    i18n: {
+      locale: ['en', 'es'],
+      defaultLocale: 'es',
+      vueI18n: {
+        fallbackLocale: 'es',
+        messages
+      },
+      vuex: { moduleName: 'i18n', syncLocale: true, syncMessages: false, syncRouteParams: true }    
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
@@ -51,7 +61,7 @@ export default {
       dark: false,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: colors.red.darken4,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
@@ -60,9 +70,9 @@ export default {
           success: colors.green.accent3
         },
         light: {
-          primary: colors.blue.darken2,
+          primary: colors.red.darken4,
           accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          secondary: colors.grey.lighten3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,

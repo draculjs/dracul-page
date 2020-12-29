@@ -1,5 +1,6 @@
 <template>
   <v-app :dark="dark">
+    <navigation-drawer></navigation-drawer>
     <v-app-bar
       :clipped-left="clipped"
       fixed
@@ -137,17 +138,16 @@
 </template>
 
 <script>
+import navigationDrawer from '~/components/navigationDrawer.vue'
 import languageSelect from '~/components/languageSelect'
 
 export default {
-  components:{
-    languageSelect
-  },
+  components: { navigationDrawer, languageSelect },
   data () {
     return {
       clipped: true,
       drawer: true,
-      fixed: false,
+      fixed: true,
       pages: {
         home:{
           to: '/'
@@ -165,11 +165,7 @@ export default {
           to: '/support'
         }
       },
-      miniVariant: false,
-      right: true,
       dark: false,
-      rightDrawer: false,
-      title: 'Welcome'
     }
   },
   watch:{
@@ -189,9 +185,5 @@ export default {
 }
 .maxw{
   max-width: 100%;
-}
-li{
-  font-size: 15px;
-  list-style-type: none;
 }
 </style>

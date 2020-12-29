@@ -1,0 +1,113 @@
+<template>
+    <v-row class="d-flex flex-wrap wrap justify-space-around">
+    <v-card class="justify-center transparent elevation-0 align-center mt-10 pa-5" width="100%">
+      <v-card-title primary-title class=" justify-center">
+        <div>
+          <h1 class="section">{{$t("modules.title")}}</h1>
+        </div>
+      </v-card-title>
+    </v-card>
+    <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
+      <v-card class="mt-5 transparent elevation-0">
+      <v-img src="/modules/user.png" contain height="100px"></v-img>      
+      </v-card>
+        <v-card-text class="mb-auto black--text">
+          <h3 class="headline mb-5 text-center">{{$t("modules.userModuleTitle")}}</h3>
+          <p class="justified" >{{$t("modules.userModuleDescription")}}</p>
+        </v-card-text>
+      <v-card-actions>
+        <v-btn  color="primary">{{$t("modules.moreInfo")}}</v-btn>
+      </v-card-actions>
+    </v-card>
+    <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
+      <v-card class="mt-5 transparent elevation-0">
+      <v-img src="/modules/personalization.jpg" contain height="100px"></v-img>      
+      </v-card>
+      <v-card-text class="mb-auto black--text">
+          <h3 class="headline mb-5 text-center">{{$t("modules.costumizeModuleTitle")}}</h3>
+          <p class="justified">{{$t("modules.costumizeModuleDescription")}}</p>
+        </v-card-text>
+      <v-card-actions >
+        <v-btn color="primary">{{$t("modules.moreInfo")}}</v-btn>
+      </v-card-actions>
+    </v-card>
+    <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
+      <v-card class="mt-5 transparent elevation-0">
+      <v-img src="/modules/common.png" contain height="100px"></v-img>      
+      </v-card>
+      <v-card-text class="mb-auto black--text">
+          <h3 class="headline mb-5 text-center">{{$t("modules.commonModuleTitle")}}</h3>
+          <p class="justified">{{$t("modules.commonModuleDescription")}}</p>
+        </v-card-text>
+      <v-card-actions>
+        <v-btn color="primary">{{$t("modules.moreInfo")}}</v-btn>
+      </v-card-actions>
+    </v-card>
+    <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
+      <v-card class="mt-5 transparent elevation-0">
+      <v-img src="/modules/queue.png" contain height="100px"></v-img>      
+      </v-card>
+      <v-card-text class="mb-auto black--text">
+          <h3 class="headline mb-5 text-center">{{$t("modules.queueModuleTitle")}}</h3>
+          <p class="justified" >{{$t("modules.queueModuleDescription")}}</p>
+        </v-card-text>
+      <v-card-actions>
+        <v-btn  color="primary">{{$t("modules.moreInfo")}}</v-btn>
+      </v-card-actions>
+    </v-card>
+    <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
+      <v-card class="mt-5 transparent elevation-0">
+      <v-img src="/modules/Multimedia.png" contain height="100px"></v-img>      
+      </v-card>
+      <v-card-text class="mb-auto black--text">
+          <h3 class="headline mb-5 text-center">{{$t("modules.mediaModuleTitle")}}</h3>
+          <p class="justified">{{$t("modules.mediaModuleDescription")}}</p>
+        </v-card-text>
+      <v-card-actions>
+        <v-btn  color="primary">{{$t("modules.moreInfo")}}</v-btn>
+      </v-card-actions>
+    </v-card>
+    <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
+      <v-card class="mt-5 transparent elevation-0">
+      <v-img src="/modules/notification.png" contain height="100px"></v-img>      
+      </v-card>
+      <v-card-text class="mb-auto black--text">
+          <h3 class="headline mb-5 text-center">{{$t("modules.notificationModuleTitle")}}</h3>
+          <p class="justified">{{$t("modules.notificationModuleDescription")}}</p>
+        </v-card-text>
+      <v-card-actions>
+        <v-btn color="primary">{{$t("modules.moreInfo")}}</v-btn>
+      </v-card-actions>
+    </v-card>
+    <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
+      <v-card class="mt-5 transparent elevation-0">
+      <v-img src="/modules/logger.png" contain height="100px"></v-img>      
+      </v-card>
+      <v-card-text class="mb-auto black--text">
+          <h3 class="headline mb-5 text-center">{{$t("modules.loggerModuleTitle")}}</h3>
+          <p class="justified">{{$t("modules.loggerModuleDescription")}}</p>
+        </v-card-text>
+      <v-card-actions>
+        <v-btn color="primary">{{$t("modules.moreInfo")}}</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-row>
+</template>
+<script>
+export default {
+    name: "modules"
+}
+</script>
+<style>
+.section{
+  font-size: 70px;
+  margin: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:300;
+  color: rgb(94, 15, 15);
+}
+.justified{
+  text-align: justify;
+  text-justify: distribute;
+}
+</style>
