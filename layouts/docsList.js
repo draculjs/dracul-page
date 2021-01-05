@@ -1,3 +1,5 @@
+let language= 'en'
+
 let docsList = {}
 export default docsList = {
         docs :[
@@ -11,7 +13,7 @@ export default docsList = {
             },
             {
                 title: "Features",
-                to: '/docs/userModule/features'
+                to: '/docs/userModule/documentation'+'_'+language
             }
             ],
             active: false,
@@ -46,3 +48,4 @@ export default docsList = {
         },
         ]
 }
+

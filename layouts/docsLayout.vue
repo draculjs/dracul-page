@@ -74,9 +74,9 @@
       :absolute="!fixed"
       app
       class="pa-0"
-      color= "transparent"
+      color= "secondary"
     >
-    <v-container class="mt-5 secondary maxw">
+    <v-container class="mt-0 secondary maxw">
       <v-row >
         <v-col cols="4">
           <v-card class="transparent" elevation="0">
@@ -147,7 +147,7 @@ export default {
     return {
       clipped: true,
       drawer: true,
-      fixed: true,
+      fixed: false,
       pages: {
         home:{
           to: '/'

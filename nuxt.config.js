@@ -1,5 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 import messages from "./i18n/messages"
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -39,7 +40,15 @@ export default {
   modules:
     [
     'nuxt-i18n',
+    '@nuxt/content'
     ],
+    generate: {
+      async ready () {
+        const { $content } = require('@nuxt/content')
+        const files = await $content().only(['slug']).fetch()
+        console.log(files)
+      }
+    },
 
     i18n: {
       locale: ['en', 'es'],
@@ -52,7 +61,34 @@ export default {
   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+  content: {
+    editor: '~/.nuxt/content/editor.vue',
+    apiPrefix: '_content',
+    dir: 'content',
+    fullTextSearchFields: ['title', 'description', 'slug', 'text'],
+    nestedProperties: [],
+    liveEdit: false,
+    markdown: {
+      remarkPlugins: [
+        'remark-squeeze-paragraphs',
+        'remark-slug',
+        'remark-autolink-headings',
+        'remark-external-links',
+        'remark-emoji',
+        'remark-footnotes'
+      ],
+      rehypePlugins: [
+        
+      ],
+      prism: {
+        theme: 'prismjs/themes/prism.css'
+      }
+    },
+    yaml: {},
+    csv: {},
+    xml: {},
+    extendParser: {}
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
