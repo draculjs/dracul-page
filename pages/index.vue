@@ -52,7 +52,7 @@
           <h1 class="section ">Stack</h1>
         </div>
       </v-card-title>
-      <v-card name class="d-flex transparent elevation-0 justify-space-around align-center wrap mt-10">
+      <v-card name class="d-flex transparent elevation-0 justify-space-around align-center wrap my-10">
         <h2>Frontend:</h2>
         <v-img src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img>
         <v-img src="/logos/Vue.svg.png" height="120px" contain max-width="120px"></v-img>
@@ -60,6 +60,7 @@
         <v-img src="/logos/graphql.png" height="120px" contain max-width="120px"></v-img>
         <v-img src="/logos/apollo.png" height="120px" contain max-width="120px"></v-img>
       </v-card>
+      <v-divider></v-divider>
       <v-card name class="d-flex transparent elevation-0 justify-space-around align-center wrap my-10">
         <h2>Backend:</h2>
         <v-img src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img>
@@ -71,6 +72,7 @@
         <v-img src="/logos/graphql.png" height="120px" contain max-width="120px"></v-img>
         <v-img src="/logos/apollo.png" height="120px" contain max-width="120px"></v-img>
       </v-card>
+      <v-divider></v-divider>
       <v-card name class="d-flex transparent elevation-0 justify-space-around align-center wrap my-10">
         <h2>Database:</h2>
         <v-img class="" src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img>

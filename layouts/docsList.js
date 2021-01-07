@@ -1,5 +1,8 @@
-let language= 'en'
+import store from '../store'
 
+let idiom = store.language
+console.log('idioma store:',idiom)
+console.log('store',store)
 let docsList = {}
 export default docsList = {
         docs :[
@@ -13,12 +16,57 @@ export default docsList = {
             },
             {
                 title: "Features",
-                to: '/docs/userModule/documentation'+'_'+language
+                to: '/docs/userModule/documentation'+'_es'
             }
             ],
             active: false,
         },
         {
+            icon: 'mdi-desktop-classic',
+            title: 'Other module',
+            items:[
+              {
+                  title: "Installation",
+                  to: '/docs/otherModule/installation'
+              },
+              {
+                  title: "Features",
+                  to: '/docs/otherModule/features'
+              }
+              ],
+              active: false,
+          },
+          {
+            icon: 'mdi-desktop-classic',
+            title: 'Other module',
+            items:[
+              {
+                  title: "Installation",
+                  to: '/docs/otherModule/installation'
+              },
+              {
+                  title: "Features",
+                  to: '/docs/otherModule/features'
+              }
+              ],
+              active: false,
+          },
+          {
+            icon: 'mdi-desktop-classic',
+            title: 'Other module',
+            items:[
+              {
+                  title: "Installation",
+                  to: '/docs/otherModule/installation'
+              },
+              {
+                  title: "Features",
+                  to: '/docs/otherModule/features'
+              }
+              ],
+              active: false,
+          },
+          {
             icon: 'mdi-desktop-classic',
             title: 'Other module',
             items:[

@@ -13,7 +13,7 @@
           router
           exact
         >
-          <v-list-item-action>
+          <v-list-item-action class="mx-2">
             <v-icon>{{ menus.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
@@ -26,13 +26,15 @@
         v-for="doc in docsList.docs"
         :key="doc.title"
         v-model="doc.active"
-        :prepend-icon="doc.icon"
         no-action
         router
         exact
       >
         <template v-slot:activator>
-          <v-list-item-content>
+          <v-list-item-action class="mx-2">
+            <v-icon>{{ doc.icon }}</v-icon>
+          </v-list-item-action>
+          <v-list-item-content class="ml-0">
             <v-list-item-title v-text="doc.title"></v-list-item-title>
           </v-list-item-content>
         </template>
@@ -51,16 +53,139 @@
     </v-navigation-drawer>
 </template>
 <script>
-import docsList from './../layouts/docsList'
 
 export default {  
     name: "navigationDrawer",
+    computed:{
+      docsList(){
+        return {
+         menu :[
+        {
+            icon: 'mdi-home',
+            title: 'Home',
+            to: '/'
+        },
+        {
+            icon: 'mdi-application-import',
+            title: 'Installation',
+            to: '/docs/installation/general'+'_'+this.$store.getters.getLanguage
+        },
+        ],
+        docs :[
+        {
+          icon: 'mdi-account-multiple',
+          title: 'User',
+          items:[
+            {
+                title: "Documentation",
+                to: '/docs/docs/user'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Enviroment variables",
+                to: '/docs/enviroment/user'+'_'+this.$store.getters.getLanguage
+            }            
+            ],
+            active: false,
+        },
+        {
+            icon: 'mdi-bell-alert',
+            title: 'Notification',
+            items:[
+              {
+                title: "Documentation",
+                to: '/docs/docs/notification'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Enviroment variables",
+                to: '/docs/enviroment/notification'+'_'+this.$store.getters.getLanguage
+            }
+              ],
+              active: false,
+          },
+        {
+            icon: 'mdi-view-module',
+            title: 'Common',
+            items:[
+              {
+                title: "Documentation",
+                to: '/docs/docs/common'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Enviroment variables",
+                to: '/docs/enviroment/common'+'_'+this.$store.getters.getLanguage
+            }
+              ],
+              active: false,
+          },
+          {
+            icon: 'mdi-clipboard-text',
+            title: 'Logger',
+            items:[
+              {
+                title: "Documentation",
+                to: '/docs/docs/logger'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Enviroment variables",
+                to: '/docs/enviroment/logger'+'_'+this.$store.getters.getLanguage
+            }
+              ],
+              active: false,
+          },
+          {
+            icon: 'mdi-palette',
+            title: 'Customization',
+            items:[
+              {
+                title: "Documentation",
+                to: '/docs/docs/customization'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Enviroment variables",
+                to: '/docs/enviroment/customization'+'_'+this.$store.getters.getLanguage
+            }
+              ],
+              active: false,
+          },
+          {
+            icon: 'mdi-human-queue',
+            title: 'Queue',
+            items:[
+              {
+                title: "Documentation",
+                to: '/docs/docs/queue'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Enviroment variables",
+                to: '/docs/enviroment/queue'+'_'+this.$store.getters.getLanguage
+            }
+              ],
+              active: false,
+          },
+          {
+            icon: 'mdi-play-network',
+            title: 'Multimedia',
+            items:[
+              {
+                title: "Documentation",
+                to: '/docs/docs/multimedia'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Enviroment variables",
+                to: '/docs/enviroment/multimedia'+'_'+this.$store.getters.getLanguage
+            }
+              ],
+              active: false,
+          }
+      ]
+}
+      }
+    },
     data () {
         return{
         clipped: true,
         drawer: true,
-        fixed: true,
-        docsList,
+        fixed: true,  
         dark: false,
         }
     }

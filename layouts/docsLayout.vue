@@ -156,7 +156,7 @@ export default {
           to: '/team'
         },
         docs:{
-          to: '/docs'
+          to: '/docs/installation/general'+'_'+this.$store.getters.getLanguage
         },
         modules:{
           to: '/modulespage'

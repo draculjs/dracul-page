@@ -12,6 +12,8 @@
   "dependencies": {
     "@nuxt/content": "^1.9.0",
     "core-js": "^3.6.5",
+    "fs": "0.0.1-security",
+    "net": "^1.0.2",
     "nuxt": "^2.14.6",
     "nuxt-i18n": "^6.16.0",
     "vue-i18n": "^8.22.2"

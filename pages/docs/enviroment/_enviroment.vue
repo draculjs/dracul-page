@@ -1,6 +1,6 @@
 <template>
   <article>
-    <nuxt-content :document="page" />
+    <nuxt-content :document="enviroment" />
   </article>
 </template>
 
@@ -9,10 +9,10 @@ export default {
   layout: 'docsLayout',
 
   async asyncData ({ $content, params}) {
-    const page = await $content('Docs/User', params.features).fetch()
+    const enviroment = await $content('Enviroment', params.enviroment).fetch()
 
     return {
-      page
+      enviroment
     }
   }
 }
