@@ -1,8 +1,4 @@
-import store from '../store'
 
-let idiom = store.language
-console.log('idioma store:',idiom)
-console.log('store',store)
 let docsList = {}
 export default docsList = {
         docs :[

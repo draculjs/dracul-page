@@ -9,7 +9,7 @@ export default {
   layout: 'docsLayout',
 
   async asyncData ({ $content, params}) {
-    const page = await $content('Docs', params.docs).fetch()
+    const page = await $content('Backend', params.backend).fetch()
 
     return {
       page

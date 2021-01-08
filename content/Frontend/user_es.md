@@ -1,8 +1,10 @@
-# CRM Ciudadano en ingles
+# Modulo de Usuario
 
 <br>
 
-El siguiente archivo es un instructivo de uso del modulo de usuario de la plataforma **CRM ciudadano**. En el mismo se buscara describir las funcionalidades principales de dicho modulo, estas son:  
+Provee modelos, servicios, componentes y páginas para la gestión y autenticación de los usuarios de la aplicación. Tiene un enfoque stateless manejando la autenticación mediante JWT e implementa RBAC (Role Based Access Control) para la gestión de roles y permisos.
+
+Las principales funcionalidades del mismo son:
 
 1. 1) Funcionalidades de la sesion de usuario 
     + -Iniciar sesion
@@ -20,6 +22,82 @@ El siguiente archivo es un instructivo de uso del modulo de usuario de la plataf
 
 <br>
 
+    "dependencies": {
+     "@dracul/user-frontend":
+     ...
+<br>
+
+    "dependencies": {
+     "@dracul/user-backend":
+     ...
+
+<br>
+
+---
+## Principales importacinoes del BACKEND
+
+<br>
+
+Uso de Middleware por parte de la app:
+
+*apps/api/src/index.js*
+
+    import {jwtMiddleware, corsMiddleware, rbacMiddleware, sessionMiddleware} from '@dracul/user-backend'
+<br>
+
+Mergeo de Resolvers y Types:
+    
+*apps/api/src/modules-merge.js*
+
+    import {securityResolvers,securityTypes} from '@dracul/user-backend'
+
+<br>
+
+Utilizacion del init del modulo para la verificacion de permisos:
+
+*apps/api/src/scripts/init.js*
+
+    import {InitService} from '@dracul/user-backend'
+
+<br>
+
+---
+## Principales importacinoes del FRONTEND
+
+<br>
+
+Se debe mergear las rutas del proyecto con las del modulo a instalar para tener acceso a todas las vistas:
+
+*apps/frontend/src/router/routes.js*
+
+    import {routes as userRoutes} from '@dracul/user-frontend'
+
+<br>
+
+Se debe mergear los mensajes del proyecto con los del modulo a instalar para tener acceso a todas las traducciones:
+
+*apps/frontend/src/i18n/index.js*
+
+    import {i18nMessages as i18nMessagesUser} from '@dracul/user-frontend'
+
+<br>
+
+Se debe inicializar graphQL con apolloClient para hacer uso de las querys del modulo:
+
+*apps/frontend/src/main.js*
+
+    import { setGraphQlClientToProviders } from "@dracul/user-frontend";
+
+<br>
+
+Uso del store del modulo junto con el del proyecto:
+
+*apps/frontend/src/store/index.js*
+
+    import {UserModuleStore} from '@dracul/user-frontend'
+
+<br>
+
 ---
 ---
 <br>
@@ -29,6 +107,12 @@ El siguiente archivo es un instructivo de uso del modulo de usuario de la plataf
 <br>
 
 En esta seccion detallaremos las distintas funcionalidades para la configuracion, creacion y edicion del usuario propio en la plataforma.
+
+### Componente de acceso
+
+El componente para acceder a esta funcionalidad es el **AppBarUserMenu**, el mismo muestra, donde se lo ubique, el acceso al login en caso de no haber iniciado sesion o el acceso a la configuracion de usuario en caso de estar loggeado. 
+
+    import {AppBarUserMenu} from '@dracul/user-frontend'
 
 ----
 ## Iniciar sesion    
@@ -68,6 +152,7 @@ Para registrar un usuario nuevo se piden una serie de datos:
 - Telefono
 
 <br>
+
 Estos son todos obligatorios a excepcion del numero de telefono. Al completar dicho formulario debe darle click en *Sign up*, y, en caso de ser toda la informacion valida, sera redirigido a una pantalla donde le aparecera un mensaje de registrado correctamente, y se mostrara la direccion de correo electronico a la cual se le envio la confirmacion para la activacion de su usuario.<br><br>
 
 ## Activacion de usuario
@@ -104,23 +189,21 @@ Para hacer esto se debe primero iniciar sesion. Una vez en la pantalla principal
 <br>
 
 # Funciones de administrador
+<br>
+
 En esta seccion se detallarn las funciones correspondietnes a un usuario administrador, las mismas son la posibilidad de creacion, edicion y control de todos los usuarios, sus roles y los distintos grupos, junto con la visualizacion de un dashboard general de control.
 
-Para acceder a estas funciones, una vez iniciada la sesion se debe ir a la esquina superior izquierda de la pantalla, y hacer click sobre el icono de menu(3 rayas horizontales). Se desplegara un menu lateral con varias opciones:
-
-|   Menu      |
-|:------------|
-|-------------|
-|  Principal  |
-| Acerca de   |
-| Campañas    |
-| Ciudadanos  | 
-|  Empresas   |
-|Administrador|
+Para acceder a estas funciones, una vez iniciada la sesion se debe ir al boton del componente DashboardButton y hacer click en el mismo.
 
 <br>
 
-En esta  ultima opcion de **Administrador** se encontraran todas las funciones que se mencionaron y que explicaremos a continuacion.
+### Componente de acceso
+
+<br>
+
+El componente para acceder a esta funcionalidad es el **DashboardButton**, siendo el mismo un botom de accesos al tablero de contro del administrador, al hacer click sobre este componente se redirige al tablero previamente mencionado donde se tiene acceso a todas las funcionalidades que se mencionaron y que explicaremos a continuacion.
+
+    import {DashboardButton} from '@dracul/user-frontend'
 
 
 ----
@@ -155,11 +238,13 @@ Los roles sirven para manejar los permisos que cada usuario tiene dentro de la p
 Al ingresar a la pantalla de administracion de roles se puede observar una lista de todos los permisos de la plataforma y cuales de estos estan asignados a cada rol.
 
 |Permisos   | Rol 1 |Rol 2|
-|--------   | ----- |-----|
+|--------   | :----:|:---:|
 | Permiso 1 |    si | no  |
 | Permiso 2 |   si  | si  |
 
-Debajo de cada rol hay 2 iconos, editar y elimina. El primero permite la edicion del rol, donde se puede modificar el nombre y cuales permisos tiene y cuales no. El otro elimina el rol de la plataforma.
+<br>
+
+Debajo de cada rol hay 2 iconos, editar y eliminar. El primero permite la edicion del rol, donde se puede modificar el nombre y cuales permisos tiene y cuales no. El otro elimina el rol de la plataforma.
 
 Para **crear un nuevo rol** se debe seleccionar el simbolo **(+)** en la esquina inferior derecha, al hacer click en este se despliega el fomrulario para creacion de roles solicitando el nombre del rol con los permisos del mismo.
 
@@ -170,14 +255,18 @@ Para **crear un nuevo rol** se debe seleccionar el simbolo **(+)** en la esquina
 Los grupos sirven para clasificar a los usuarios por algo ams alla de su rol, como puede ser un proyeccto o sector especifico. Desde esta  pantalla se puede visualizar, editar y crear nuevos grupos.
 Al ingresar a la pantalla de administracion de grupos se puede observar una lista de todos los grupos que fueron creados, con la informacion de los mismos.
 
-|Avatar| Nombre  |Color|Usuarios|Acciones
-|------| ------- |-----|--------|---
-|      |         |     |        |
+|Avatar|  |Nombre | |Color| |Usuarios| |Acciones|
+|------|--|-------|-|-----|-|--------|-|--------|
+|   img|  |grupo 1| |rojo | |usA,usB | |CRUD   |
+
+<br>
 
 A partir de esta informacion se puede utilizar la barra de busqueda para filtrar los grupos por cualquiera de estos datos y clickear en los titulos de las columnas para ordenar las listas. Asi como tambien hay una serie de acciones que se pueden tomar para cada usuario segun la accion que se elija en la ultima columna de la lista:
 - Ver info del grupo: Despliega toda la informacion del grupo
 - Editar: Permite editar toda la informacion y los integrantes del grupo
 - Eliminar: Elimina el grupo
+
+<br>
 
 Para **crear un nuevo grupo** se debe seleccionar el simbolo **(+)** en la esquina inferior derecha, al hacer click en este se despliega el fomrulario para creacion de usuaruios con toda la informacion necesaria y los integrantes del mismo.
 
@@ -211,3 +300,84 @@ Consta de un mapa en el caul se puede posicionar el cursor para identificar la c
 
 ### Sesiones por ciudad
 Grafico de barras comparativo que muestra las cantidades de ingresos desde las distintas locaciones registradas.
+
+-----
+-----
+<br>
+
+## Requisitos
+- -store
+- -i18n
+- -vuetify
+- -apollo client
+- -router
+
+<br>
+
+## Stack & Dependencias
+- -Nodejs
+- -Express
+- -Mongoose
+- -Nodemailer
+- -Graphql (Apollo Server)
+- -JWT Auth
+
+<br>
+
+## Dependencias
+```
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-error": "^1.1.13",
+    "apollo-upload-client": "^13.0.0",
+    "chart.js": "^2.9.3",
+    "chartjs-plugin-labels": "^1.1.0",
+    "core-js": "^3.6.5",
+    "graphql": "^15.0.0",
+    "jwt-decode": "^2.2.0",
+    "moment": "^2.26.0",
+    "moment-timezone": "^0.5.31",
+    "vue": "^2.6.11",
+    "vue-chartjs": "^3.5.0",
+    "vue-i18n": "^8.18.1",
+    "vue-map-chart": "0.0.2",
+    "vue-router": "^3.3.2",
+    "vuetify": "^2.2.11",
+    "vuex": "^3.4.0"
+  }
+```
+<br>
+
+## Dev Dependencias
+```
+    devDependencies{
+        "graphql-tag": "^2.10.3",
+        "deepmerge": "^4.2.2"
+    }
+```
+<br>
+
+## Misc
+- Storybook
+- Test with jest
+
+<br>
+
+## vue.config.js
+Add gql loader
+```
+module.exports = {
+  "transpileDependencies": [
+    "vuetify"
+  ],
+  chainWebpack: (config) => {
+    config.module
+        .rule('gql')
+        .test(/\.(graphql|gql)$/)
+        .use('graphql-tag/loader')
+        .loader('graphql-tag/loader')
+        .end();
+  }
+}

@@ -77,8 +77,8 @@ export default {
           title: 'User',
           items:[
             {
-                title: "Documentation",
-                to: '/docs/docs/user'+'_'+this.$store.getters.getLanguage
+                title: "Doc Frontend",
+                to: '/docs/docFrontend/user'+'_'+this.$store.getters.getLanguage
             },
             {
                 title: "Enviroment variables",
@@ -92,8 +92,12 @@ export default {
             title: 'Notification',
             items:[
               {
-                title: "Documentation",
-                to: '/docs/docs/notification'+'_'+this.$store.getters.getLanguage
+                title: "Doc Frontend",
+                to: '/docs/docFrontend/notification'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Doc Backend",
+                to: '/docs/docBackend/notification'+'_'+this.$store.getters.getLanguage
             },
             {
                 title: "Enviroment variables",
@@ -108,11 +112,7 @@ export default {
             items:[
               {
                 title: "Documentation",
-                to: '/docs/docs/common'+'_'+this.$store.getters.getLanguage
-            },
-            {
-                title: "Enviroment variables",
-                to: '/docs/enviroment/common'+'_'+this.$store.getters.getLanguage
+                to: '/docs/docFrontend/common'+'_'+this.$store.getters.getLanguage
             }
               ],
               active: false,
@@ -122,8 +122,12 @@ export default {
             title: 'Logger',
             items:[
               {
-                title: "Documentation",
-                to: '/docs/docs/logger'+'_'+this.$store.getters.getLanguage
+                title: "Doc Frontend",
+                to: '/docs/docFrontend/logger'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Doc Backend",
+                to: '/docs/docBackend/logger'+'_'+this.$store.getters.getLanguage
             },
             {
                 title: "Enviroment variables",
@@ -137,8 +141,12 @@ export default {
             title: 'Customization',
             items:[
               {
-                title: "Documentation",
-                to: '/docs/docs/customization'+'_'+this.$store.getters.getLanguage
+                title: "Doc Frontend",
+                to: '/docs/docFrontend/customization'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Doc Backend",
+                to: '/docs/docBackend/customization'+'_'+this.$store.getters.getLanguage
             },
             {
                 title: "Enviroment variables",
@@ -152,8 +160,12 @@ export default {
             title: 'Queue',
             items:[
               {
-                title: "Documentation",
-                to: '/docs/docs/queue'+'_'+this.$store.getters.getLanguage
+                title: "Doc Frontend",
+                to: '/docs/docFrontend/queue'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Doc Backend",
+                to: '/docs/docBackend/queue'+'_'+this.$store.getters.getLanguage
             },
             {
                 title: "Enviroment variables",
@@ -167,8 +179,12 @@ export default {
             title: 'Multimedia',
             items:[
               {
-                title: "Documentation",
-                to: '/docs/docs/multimedia'+'_'+this.$store.getters.getLanguage
+                title: "Doc Frontend",
+                to: '/docs/docFrontend/multimedia'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "Doc Backend",
+                to: '/docs/docBackend/multimedia'+'_'+this.$store.getters.getLanguage
             },
             {
                 title: "Enviroment variables",
