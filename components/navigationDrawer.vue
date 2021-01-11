@@ -158,19 +158,19 @@ export default {
           {
             icon: 'mdi-human-queue',
             title: 'Queue',
-            items:[
+            items:[              
               {
-                title: "Doc Frontend",
-                to: '/docs/docFrontend/queue'+'_'+this.$store.getters.getLanguage
-            },
-            {
-                title: "Doc Backend",
-                to: '/docs/docBackend/queue'+'_'+this.$store.getters.getLanguage
-            },
-            {
-                title: "Enviroment variables",
-                to: '/docs/enviroment/queue'+'_'+this.$store.getters.getLanguage
-            }
+                  title: "Doc Backend",
+                  to: '/docs/docBackend/queue'+'_'+this.$store.getters.getLanguage
+              },
+              {
+                  title: "Doc Stats Frontend",
+                  to: '/docs/docFrontend/queue-stats'+'_'+this.$store.getters.getLanguage
+              },
+              {
+                  title: "Doc Stats Backend",
+                  to: '/docs/docBackend/queue-stats'+'_'+this.$store.getters.getLanguage
+              }
               ],
               active: false,
           },
