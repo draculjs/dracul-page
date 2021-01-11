@@ -165,11 +165,11 @@ export default {
               },
               {
                   title: "Doc Stats Frontend",
-                  to: '/docs/docFrontend/queue-stats'+'_'+this.$store.getters.getLanguage
+                  to: '/docs/docFrontend/queue_stats'+'_'+this.$store.getters.getLanguage
               },
               {
                   title: "Doc Stats Backend",
-                  to: '/docs/docBackend/queue-stats'+'_'+this.$store.getters.getLanguage
+                  to: '/docs/docBackend/queue_stats'+'_'+this.$store.getters.getLanguage
               }
               ],
               active: false,
