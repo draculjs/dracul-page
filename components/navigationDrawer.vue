@@ -121,18 +121,10 @@ export default {
             icon: 'mdi-clipboard-text',
             title: 'Logger',
             items:[
-              {
-                title: "Doc Frontend",
-                to: '/docs/docFrontend/logger'+'_'+this.$store.getters.getLanguage
-            },
-            {
-                title: "Doc Backend",
-                to: '/docs/docBackend/logger'+'_'+this.$store.getters.getLanguage
-            },
-            {
-                title: "Enviroment variables",
-                to: '/docs/enviroment/logger'+'_'+this.$store.getters.getLanguage
-            }
+                {
+                    title: "Logger",
+                    to: '/docs/enviroment/logger'+'_'+this.$store.getters.getLanguage
+                }
               ],
               active: false,
           },
