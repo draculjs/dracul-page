@@ -1,8 +1,10 @@
 <template>
-  <article>
+<div class="white">
+  <article class="mx-5 white">
     <h1>Installation</h1>
     <nuxt-content :document="install" />
   </article>
+</div>
 </template>
 
 <script>
