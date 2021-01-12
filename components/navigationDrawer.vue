@@ -129,7 +129,7 @@ export default {
             title: 'Logger',
             items:[
                 {
-                    title: "Logger",
+                    title: "Documentation",
                     to: '/docs/docFrontend/logger'+'_'+this.$store.getters.getLanguage
                 }
               ],
