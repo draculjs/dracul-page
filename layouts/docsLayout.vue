@@ -50,7 +50,7 @@
       {{$t("layout.support")}}
       </v-btn>
       </v-col>
-      <v-col cols="3">
+      <v-col cols="2">
       <v-text-field
         class="text-red"
         label= "Search"
@@ -62,6 +62,9 @@
         clearable
         clear-icon="mdi-close-circle-outline"
       >{{$t("layout.search")}}</v-text-field>
+      </v-col>
+      <v-col cols="1" class="d-flex justify-space-around align-center">
+      <languageSelect ></languageSelect>
       </v-col>
     </v-row>
     </v-app-bar>
@@ -130,7 +133,6 @@
       label="Dark mode"
     ></v-switch>
       <v-spacer></v-spacer>
-      <languageSelect></languageSelect>
       <span class="mr-2">Dracul software development</span>
     
     </v-footer>

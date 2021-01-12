@@ -26,7 +26,7 @@
             color="primary"
             width="130px"
             nuxt
-            to="/docs"
+            :to="pages.docs.to"
           >
             {{$t("homepage.getStarted")}}
           </v-btn>
@@ -106,8 +106,14 @@ components: {
 }
 
 export default {
+  data () {
+    return {
+      pages: {
+        docs:{
+          to: '/docs/installation/general'+'_'+this.$store.getters.getLanguage
+        }
+}}}}
 
-}
 </script>
 
 <style>
