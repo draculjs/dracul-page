@@ -29,9 +29,12 @@ Its main features are:
 
 <br>
 
-    "dependencies": {
-     "@dracul/common-frontend":
-     ...
+## Installation
+
+```
+npm i @dracul/common-frontend
+```
+
 <br>
 
 ---
@@ -201,9 +204,16 @@ Text-field component linked to a search, to which only the label is passed and t
 ## Toolbar Dialog and Simple Dialog
 
 Two components that form a basic message card to display information or messages with:
-- -ToolbarDialgo: A close button in the upper right corner and a title in the upper left corner. (Uses the CloseButton)
+- -ToolbarDialog: A close button in the upper right corner and a title in the upper left corner.
 - -SimpleDialog: The content to display on the card.
 
 <br>
 
+-----------
+
+## Recommendation
+
+It is recommended to use Scaffold, where you already have all the modules implemented to be able to use it as a project base.
+
+https://github.com/draculjs/scaffold
 

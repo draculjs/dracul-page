@@ -16,7 +16,7 @@
           <p class="justified" >{{$t("modules.userModuleDescription")}}</p>
         </v-card-text>
       <v-card-actions>
-        <v-btn  color="primary">{{$t("modules.moreInfo")}}</v-btn>
+        <v-btn nuxt :to="docs.user"  color="primary">{{$t("modules.moreInfo")}}</v-btn>
       </v-card-actions>
     </v-card>
     <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
@@ -24,11 +24,11 @@
       <v-img src="/modules/personalization.jpg" contain height="100px"></v-img>      
       </v-card>
       <v-card-text class="mb-auto black--text">
-          <h3 class="headline mb-5 text-center">{{$t("modules.costumizeModuleTitle")}}</h3>
-          <p class="justified">{{$t("modules.costumizeModuleDescription")}}</p>
+          <h3 class="headline mb-5 text-center">{{$t("modules.customizeModuleTitle")}}</h3>
+          <p class="justified">{{$t("modules.customizeModuleDescription")}}</p>
         </v-card-text>
       <v-card-actions >
-        <v-btn color="primary">{{$t("modules.moreInfo")}}</v-btn>
+        <v-btn nuxt :to="docs.customization" color="primary">{{$t("modules.moreInfo")}}</v-btn>
       </v-card-actions>
     </v-card>
     <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
@@ -40,7 +40,7 @@
           <p class="justified">{{$t("modules.commonModuleDescription")}}</p>
         </v-card-text>
       <v-card-actions>
-        <v-btn color="primary">{{$t("modules.moreInfo")}}</v-btn>
+        <v-btn nuxt :to="docs.common" color="primary">{{$t("modules.moreInfo")}}</v-btn>
       </v-card-actions>
     </v-card>
     <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
@@ -52,7 +52,7 @@
           <p class="justified" >{{$t("modules.queueModuleDescription")}}</p>
         </v-card-text>
       <v-card-actions>
-        <v-btn  color="primary">{{$t("modules.moreInfo")}}</v-btn>
+        <v-btn nuxt :to="docs.queue"  color="primary">{{$t("modules.moreInfo")}}</v-btn>
       </v-card-actions>
     </v-card>
     <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
@@ -64,7 +64,7 @@
           <p class="justified">{{$t("modules.mediaModuleDescription")}}</p>
         </v-card-text>
       <v-card-actions>
-        <v-btn  color="primary">{{$t("modules.moreInfo")}}</v-btn>
+        <v-btn nuxt :to="docs.multimedia"  color="primary">{{$t("modules.moreInfo")}}</v-btn>
       </v-card-actions>
     </v-card>
     <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
@@ -76,7 +76,7 @@
           <p class="justified">{{$t("modules.notificationModuleDescription")}}</p>
         </v-card-text>
       <v-card-actions>
-        <v-btn color="primary">{{$t("modules.moreInfo")}}</v-btn>
+        <v-btn nuxt :to="docs.notification" color="primary">{{$t("modules.moreInfo")}}</v-btn>
       </v-card-actions>
     </v-card>
     <v-card class="d-flex justify-start flex-column align-center ma-2 transparent elevation-0" height="400px" max-width="30%" width="29%">
@@ -88,14 +88,27 @@
           <p class="justified">{{$t("modules.loggerModuleDescription")}}</p>
         </v-card-text>
       <v-card-actions>
-        <v-btn color="primary">{{$t("modules.moreInfo")}}</v-btn>
+        <v-btn nuxt :to="docs.logger" color="primary">{{$t("modules.moreInfo")}}</v-btn>
       </v-card-actions>
     </v-card>
   </v-row>
 </template>
 <script>
 export default {
-    name: "modules"
+    name: "modules",
+    data () {
+      return {
+        docs :{
+          user: '/docs/docFrontend/user'+'_'+this.$store.getters.getLanguage ,
+          notification:'/docs/docFrontend/notification'+'_'+this.$store.getters.getLanguage,
+          common: '/docs/docFrontend/common'+'_'+this.$store.getters.getLanguage,
+          logger: '/docs/docFrontend/logger'+'_'+this.$store.getters.getLanguage,
+          customization: '/docs/docFrontend/customization'+'_'+this.$store.getters.getLanguage,
+          queue: '/docs/docBackend/queue'+'_'+this.$store.getters.getLanguage,
+          multimedia: '/docs/docFrontend/multimedia'+'_'+this.$store.getters.getLanguage
+        }
+      }
+    }
 }
 </script>
 <style>
