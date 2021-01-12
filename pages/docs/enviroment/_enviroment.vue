@@ -1,7 +1,9 @@
-<template>
-  <article>
+<template >
+<div class="white">
+  <article class="mx-5 white">
     <nuxt-content :document="enviroment" />
   </article>
+</div>
 </template>
 
 <script>

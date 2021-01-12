@@ -17,7 +17,7 @@
             <v-icon>{{ menus.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="menus.title" />
+            <v-list-item-title>{{$t('sidemenu.'+menus.title) }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -35,7 +35,7 @@
             <v-icon>{{ doc.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content class="ml-0">
-            <v-list-item-title v-text="doc.title"></v-list-item-title>
+            <v-list-item-title>{{$t('sidemenu.'+doc.title) }}</v-list-item-title>
           </v-list-item-content>
         </template>
 
@@ -45,7 +45,7 @@
           :to="child.to"
         >
           <v-list-item-content>
-            <v-list-item-title  v-text="child.title"></v-list-item-title>
+            <v-list-item-title >{{$t('sidemenu.'+child.title) }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
@@ -77,11 +77,15 @@ export default {
           title: 'User',
           items:[
             {
-                title: "Doc Frontend",
+                title: "DocsFrontend",
                 to: '/docs/docFrontend/user'+'_'+this.$store.getters.getLanguage
             },
             {
-                title: "Enviroment variables",
+                title: "DocsBackend",
+                to: '/docs/docBackend/user'+'_'+this.$store.getters.getLanguage
+            },
+            {
+                title: "DocsEnv",
                 to: '/docs/enviroment/user'+'_'+this.$store.getters.getLanguage
             }            
             ],
@@ -92,15 +96,15 @@ export default {
             title: 'Notification',
             items:[
               {
-                title: "Doc Frontend",
+                title: "DocsFrontend",
                 to: '/docs/docFrontend/notification'+'_'+this.$store.getters.getLanguage
             },
             {
-                title: "Doc Backend",
+                title: "DocsBackend",
                 to: '/docs/docBackend/notification'+'_'+this.$store.getters.getLanguage
             },
             {
-                title: "Enviroment variables",
+                title: "DocsEnv",
                 to: '/docs/enviroment/notification'+'_'+this.$store.getters.getLanguage
             }
               ],
@@ -133,15 +137,15 @@ export default {
             title: 'Customization',
             items:[
               {
-                title: "Doc Frontend",
+                title: "DocsFrontend",
                 to: '/docs/docFrontend/customization'+'_'+this.$store.getters.getLanguage
             },
             {
-                title: "Doc Backend",
+                title: "DocsBackend",
                 to: '/docs/docBackend/customization'+'_'+this.$store.getters.getLanguage
             },
             {
-                title: "Enviroment variables",
+                title: "DocsEnv",
                 to: '/docs/enviroment/customization'+'_'+this.$store.getters.getLanguage
             }
               ],
@@ -152,15 +156,15 @@ export default {
             title: 'Queue',
             items:[              
               {
-                  title: "Doc Backend",
+                  title: "DocsBackend",
                   to: '/docs/docBackend/queue'+'_'+this.$store.getters.getLanguage
               },
               {
-                  title: "Doc Stats Frontend",
+                  title: "DocStatsFrontend",
                   to: '/docs/docFrontend/queue-stats'+'_'+this.$store.getters.getLanguage
               },
               {
-                  title: "Doc Stats Backend",
+                  title: "DocStatsBackend",
                   to: '/docs/docBackend/queue-stats'+'_'+this.$store.getters.getLanguage
               }
               ],
@@ -171,15 +175,15 @@ export default {
             title: 'Multimedia',
             items:[
               {
-                title: "Doc Frontend",
+                title: "DocsFrontend",
                 to: '/docs/docFrontend/multimedia'+'_'+this.$store.getters.getLanguage
             },
             {
-                title: "Doc Backend",
+                title: "DocsBackend",
                 to: '/docs/docBackend/multimedia'+'_'+this.$store.getters.getLanguage
             },
             {
-                title: "Enviroment variables",
+                title: "DocsEnv",
                 to: '/docs/enviroment/multimedia'+'_'+this.$store.getters.getLanguage
             }
               ],

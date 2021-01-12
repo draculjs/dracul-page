@@ -22,32 +22,76 @@ Its main features are:
 
 <br>
 
-    "dependencies": {
-     "@dracul/user-frontend":
-     ...
-<br>
+## Installation
 
-    "dependencies": {
-     "@dracul/user-backend":
-     ...
+```
+npm i @dracul/user-frontend
+```
 
 <br>
 
 ---
-## Main BACKEND services
+## Main FRONTEND imports
 
 <br>
 
-*apps/api/src/index.js*
+The project paths must be merged with those of the module to have access to all the views:
 
-    import {jwtMiddleware, corsMiddleware, rbacMiddleware, sessionMiddleware} from '@dracul/user-backend'
+*apps/frontend/src/router/routes.js*
+
+    import {routes as userRoutes} from '@dracul/user-frontend'
+
 <br>
 
-*apps/api/src/modules-merge.js*
+The messages of the project must be merged with those of the module to have access to all translations:
 
-    import {securityResolvers,securityTypes} from '@dracul/user-backend'
+*apps/frontend/src/i18n/index.js*
+
+    import {i18nMessages as i18nMessagesUser} from '@dracul/user-frontend'
+
+<br>
+
+GraphQL must be initialized with apolloClient to make use of the module's queries:
+
+*apps/frontend/src/main.js*
+
+    import { setGraphQlClientToProviders } from "@dracul/user-frontend";
+
+    setGraphQlClientToProviders(apolloClient);
 
 
+<br>
+
+Use of the module store together with the project store:
+
+*apps/frontend/src/store/index.js*
+
+    import {UserModuleStore} from '@dracul/user-frontend'
+
+    import createPersistedState from "vuex-persistedstate";
+
+    export default new Vuex.Store({
+    modules:{
+        user: UserModuleStore,
+        ...
+    },
+    plugins: [
+        createPersistedState({
+            key: process.env.VUE_APP_KEY,
+            paths: ['user'],
+            reducer: state => (
+                {
+                user: {
+                    access_token: state.user.access_token,
+                    me: state.user.me
+                },
+                ...
+            })
+          })
+       ]
+    })
+
+<br>
 
 ---
 ---
@@ -332,3 +376,12 @@ module.exports = {
         .end();
   }
 }
+```
+
+-----------
+
+## Recommendation
+
+It is recommended to use Scaffold, where you already have all the modules implemented to be able to use it as a project base.
+
+https://github.com/draculjs/scaffold

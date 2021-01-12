@@ -2,9 +2,30 @@
 
 <br>
 
-## Variables de entorno .env
+## Enviroment variables .env
+
+### Frontend
 
 ```$xslt
+NODE_ENV=development o production
+VUE_APP_APIHOST=http://localhost:5000
+VUE_APP_KEY=scaffold
+VUE_APP_REGISTER=enable
+```
+
+### Backend
+
+```$xslt
+NODE_ENV=desarrollo
+
+#MONGO CONFIG
+MONGO_URI=mongodb://127.0.0.1:27017/proyect
+
+#AUTH CONFIG
+JWT_SECRET=djghhhhuuwiwuewieuwieuriwu
+JWT_LOGIN_EXPIRED_IN=1h
+JWT_REGISTER_EXPIRED_IN=30d
+
 # Max avatar file size in bytes. Ex: 10000000 Bytes == 1 MegaByte
 AVATAR_MAX_SIZE = 20000000
 

@@ -28,9 +28,12 @@ Los principales componentes del mismo son:
 
 <br>
 
-    "dependencies": {
-     "@dracul/common-frontend":
-     ...
+## Instalación
+
+```
+npm i @dracul/common-frontend
+```
+
 <br>
 
 ---
@@ -54,7 +57,7 @@ Componentes:
         } from "@dracul/common-frontend";
 
 
-**Boton de cierre**: Boton simple con texto y color a pasarle, y funcionalidad de accional clickear.
+**Boton de cierre**: Boton que tendra el texto, color y loading que se pasa como prop. Al que se le puede utilizar con una funcion para cerrar un componente.
 
     props: {
             text: {type: String, default: "common.cancel"},
@@ -201,9 +204,15 @@ Componente de text-field linkeado a una busqueda, al cual solo se le pasa el lab
 ## Barra de herramientas de tarjeta y tarjeta simple
 
 Dos componentes que forman una trajeta de mensaje basica para mostrar informacion o mensajes con:
-- -ToolbarDialgo: Un boton de cierre en la esquina superior derecha y un titulo en la superior izquierda.(utiliza el CloseButton)
+- -ToolbarDialog: Un boton de cierre en la esquina superior derecha y un titulo en la superior izquierda.
 - -SimpleDialog: El contenido a mostrar en la tarjeta.
 
 <br>
 
+-----------
 
+## Recomendación
+
+Se recomienda utilizar Scaffold, donde ya contiene todos los módulos implementados para poder usarlo como base de proyecto.
+
+https://github.com/draculjs/scaffold

@@ -1,8 +1,9 @@
 <template>
 <div>
-     <select v-model="language" name="selectLanguage" class="blue" id="language"> 
-         <option value="en">English</option>
-         <option value="es">Español</option>
+    <v-icon color="black">mdi-translate</v-icon>
+    <select v-model="language" name="selectLanguage" class="grey--text" id="language"> 
+         <option value="en">EN</option>
+         <option value="es">ES</option>
      </select>
 </div>
 </template>
