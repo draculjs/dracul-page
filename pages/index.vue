@@ -1,5 +1,5 @@
 <template>
- <v-container class="">
+ <v-container>
   <v-card class="grey darken-2 bg" height="250px" elevation="0"></v-card>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
@@ -54,33 +54,34 @@
       </v-card-title>
       <v-card name class="d-flex transparent elevation-0 justify-space-around align-center wrap my-10">
         <h2>Frontend:</h2>
-        <v-img src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img>
-        <v-img src="/logos/Vue.svg.png" height="120px" contain max-width="120px"></v-img>
-        <v-img src="/logos/vuetify.png" height="120px" contain max-width="120px"></v-img>
-        <v-img src="/logos/graphql.png" height="120px" contain max-width="120px"></v-img>
-        <v-img src="/logos/apollo.png" height="120px" contain max-width="120px"></v-img>
+        <a href="https://www.javascript.com/" target="_blank"><v-img src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img></a>
+        <a href="https://vuejs.org/" target="_blank"><v-img src="/logos/Vue.svg.png" height="120px" contain max-width="120px"></v-img></a>
+        <a href="https://vuetifyjs.com/en/" target="_blank"><v-img src="/logos/vuetify.png" height="120px" contain max-width="120px"></v-img></a>
+        <a href="https://graphql.org/" target="_blank"><v-img src="/logos/graphql.png" height="120px" contain max-width="120px"></v-img></a>
+        <a href="https://www.apollographql.com/" target="_blank"><v-img src="/logos/apollo.png" height="120px" contain max-width="120px"></v-img></a>
       </v-card>
       <v-divider></v-divider>
       <v-card name class="d-flex transparent elevation-0 justify-space-around align-center wrap my-10">
         <h2>Backend:</h2>
-        <v-img src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img>
-        <v-img src="/logos/nodejs.png" height="120px" contain max-width="120px"></v-img>
+        <a href="https://www.javascript.com/" target="_blank"><v-img src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img></a>
+        <a href="https://nodejs.org/es/" target="_blank"><v-img src="/logos/nodejs.png" height="120px" contain max-width="120px"></v-img></a>
         <v-card class="transparent elevation-0" height="120px"> 
-          <v-img src="/logos/express.png" height="50px"  max-width="120px"></v-img>
-          <v-img src="/logos/mongoose.png" height="60px"  max-width="120px"></v-img>
+          <a href="https://expressjs.com/es/" target="_blank"><v-img src="/logos/express.png" height="50px"  max-width="120px"></v-img></a>
+          <a href="https://mongoosejs.com/" target="_blank"><v-img src="/logos/mongoose.png" height="60px"  max-width="120px"></v-img></a>
         </v-card>
-        <v-img src="/logos/graphql.png" height="120px" contain max-width="120px"></v-img>
-        <v-img src="/logos/apollo.png" height="120px" contain max-width="120px"></v-img>
+        <a href="https://graphql.org/" target="_blank"><v-img src="/logos/graphql.png" height="120px" contain max-width="120px"></v-img></a>
+        <a href="https://www.apollographql.com/" target="_blank"><v-img src="/logos/apollo.png" height="120px" contain max-width="120px"></v-img></a>
       </v-card>
       <v-divider></v-divider>
       <v-card name class="d-flex transparent elevation-0 justify-space-around align-center wrap my-10">
         <h2>Database:</h2>
-        <v-img class="" src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img>
-        <v-img class="" src="/logos/MongoDBs.png" height="120px" contain max-width="120px"></v-img>
+        <a href="https://www.javascript.com/" target="_blank"><v-img class="" src="/logos/javascript.png" height="120px" contain max-width="120px"></v-img></a>
+        <a href="https://www.mongodb.com/es" target="_blank"><v-img class="" src="/logos/MongoDBs.png" height="120px" contain max-width="120px"></v-img></a>
         <v-img src="" height="120px" contain max-width="120px"></v-img>
         <v-img src="" height="120px" contain max-width="120px"></v-img>
         <v-img src="" height="120px" contain max-width="120px"></v-img>
       </v-card>
+      <v-divider></v-divider>
     </v-card>
   </v-row>
   <v-row>
@@ -91,7 +92,7 @@
         </div>
       </v-card-title>
       <v-card class="transparent elevation-0">
-        <v-img class="my-10" src="/logos/sondeos.svg" height="150px" contain></v-img>
+        <a href="http://www.snd.com.ar/" target="_blank"><v-img class="my-10" src="/logos/sondeos.svg" height="150px" contain></v-img></a>
       </v-card>
     </v-card>
   </v-row>
@@ -125,9 +126,6 @@ export default {
 }
 main{
   background-color:rgba(141, 137, 137, 0.137);
-}
-video{
-  margin: 10%;
 }
 .section{
   font-size: 70px;

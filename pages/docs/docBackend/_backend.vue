@@ -1,6 +1,6 @@
 <template>
-<div class="white">
-  <article class="mx-5 white">
+<div class="error">
+  <article class="mx-5 error">
     <nuxt-content :document="page" />
   </article>
 </div>

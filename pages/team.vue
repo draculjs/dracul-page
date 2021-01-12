@@ -73,32 +73,32 @@ export default {
         {
           name: 'Cristian Incarnato',
           img: '/team/CristianIncarnato.jpeg',
-          position: 'The BOSS',
-          github:''
+          position: 'Fullstack developer',
+          github:'https://github.com/cincarnato'
         },
         {
           name: 'Luciano Capraro',
           img: '/team/luciano.jpg',
           position: 'Fullstack developer',
-          github:''
+          github:'https://github.com/luchoCap'
         },
         {
           name: 'Carolina Romero',
           img: '/team/CarolinaRomero.jpeg',
           position: 'Fullstack developer',
-          github:''
+          github:'https://github.com/romerocaroe'
         },
         {
           name: 'Alexis Rodriguez',
           img: '/team/alexis.jpeg',
           position: 'Fullstack developer',
-          github:''
+          github:'https://github.com/alexek-r'
         },
         {
           name: 'Joaquin Iglesias',
           img: '/team/joaco.jpeg',
           position: 'Fullstack developer',
-          github:''
+          github:'https://github.com/georgeoi'
         }
       ],
     }

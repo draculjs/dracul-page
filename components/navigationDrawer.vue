@@ -3,7 +3,10 @@
       v-model="drawer"
       :clipped="clipped"
       fixed
+      color="secondary"
       app
+      floating
+      permanent
     >
     <v-list>
         <v-list-item

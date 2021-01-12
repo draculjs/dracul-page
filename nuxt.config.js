@@ -102,7 +102,7 @@ export default {
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
+          error: colors.shades.black,
           success: colors.green.accent3
         },
         light: {
@@ -111,7 +111,7 @@ export default {
           secondary: colors.grey.lighten3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
+          error: colors.shades.white,
           success: colors.green.accent3
         }
       }

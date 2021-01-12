@@ -132,7 +132,7 @@ export default{
             moreInfo: "More Info"
                 },
         teams:{
-            team: "Our crew",
+            team: "Our Crew",
             ourTeam1: 'Our team is made up of the best developers,',
             ourTeam2: ' full of energy and enthusiasm to face any project.'
         },
