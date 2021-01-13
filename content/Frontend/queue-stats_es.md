@@ -43,6 +43,11 @@ Podés acceder las estadisticas de la cola con /queue-stats. For example http://
 
 ![Dracul Module Queue-frontend](https://i.imgur.com/xzypisD.png "Dracul Module Queue-frontend")
 
+### Recomendacion
+Se aconseja utilizar scafol dónde tenés todos los módulos ya integrados y link de scafold
+
+https://github.com/draculjs/scaffold
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

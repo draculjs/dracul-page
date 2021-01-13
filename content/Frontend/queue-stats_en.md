@@ -45,6 +45,13 @@ You can access to stats queue with /queue-stats. For example http://localhost:80
 ![Dracul Module Queue-frontend](https://i.imgur.com/xzypisD.png "Dracul Module Queue-frontend")
 
 
+## Recommendation
+It is recommended to use Scaffold, where you already have all the modules implemented to be able to use it as a project base.
+https://github.com/draculjs/scaffold
+GitHubGitHub
+draculjs/scaffold
+Base project with SPA frontend and API backend with Grahql. - draculjs/scaffold. - draculjs/scaffol
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
