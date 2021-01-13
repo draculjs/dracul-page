@@ -49,23 +49,27 @@ export default{
             userModuleTitle:"Módulo de Usuario",
             userModuleDescription:"Provee modelos, servicios, componentes y páginas para la gestión y autenticación de los usuarios de la aplicación. Tiene un enfoque stateless manejando la autenticación mediante JWT e implementa RBAC (Role Based Access Control) para la gestión de roles y permisos.",
             customizeModuleTitle:"Módulo de Personalización",
-            customizeModuleDescription:"Provee funcionalidades para personalizar ciertos aspectos de la página como sus colores, logo, e idioma.",
+            customizeModuleDescription:"Proporciona funcionalidades para personalizar ciertos aspectos de la página. Consta de componentes que permiten modificar los colores, logo, seleccionar idioma y título de la plataforma desde un panel.",
             commonModuleTitle:"Módulo común",
             commonModuleDescription:"Provee componentes basicos y reutilizables para toda plataforma. Los mismos funcionan como base para las funcionalidades mas comunes y escenciales de cualquier tipo de aplicacion.",
             queueModuleTitle:"Módulo de colas",
-            queueModuleDescription:"Provee un servicio de colas sobre mongodb.",
+            queueModuleDescription:"Provee un servicio de colas de javascript soportado sobre mongodb y mongoose. Tambien te permite visualizar las estadisticas de cada worker agregado a la cola. Las estadisticas son las tareas agregadas, pendientes, obtenidas y agarradas.",
             mediaModuleTitle:"Módulo multimedia",
             mediaModuleDescription:"Provee un servicio de gestión de archivos multimedia para gestionar archivos (Imagenes, Audio, Video, Texto, etc)",
             notificationModuleTitle:"Módulo de notificaciones",
-            notificationModuleDescription:"Provee un servicio de notificaciones de usuario utilizando graphql subscriptions + websocket",
+            notificationModuleDescription:"Este módulo le permite crear y administrar notificaciones personalizables para cualquier acción de su proyecto. Provee un servicio de notificaciones de usuario utilizando graphql subscriptions + websocket",
             loggerModuleTitle:"Módulo de Logs",
-            loggerModuleDescription:"Provee loggers de Winston pre-configurados y adaptados al stack tecnológico",
+            loggerModuleDescription:"El Módulo Dracul Logger proporciona una serie de loggers de Winston pre armados, listos para usar. Se pueden configurar las opciones desde las variables de entorno.",
             moreInfo: "Mas información"
         },
         teams:{
             team: "Integrantes",
             ourTeam1: 'Nuestro equipo esta compuesto de los mejores desarrolladores,',
-            ourTeam2: ' llenos de energia y entusiamso para encarar cualquier proyecto.'
+            ourTeam2: ' llenos de energia y entusiasmo para encarar cualquier proyecto.'
+        },
+        support:{
+            title: "Necesitas ayuda? Encontraste algo y queres colaborar con nosotros?",
+            subtitle: 'Si al usar nuestros modulos te encontraste con algun problema y necesitas ayuda, o, encontraste algun issue en nuestros modulos, no dudes en reportarlo en las siguientes plataformas asi los revisamos. Para ser parte de nuestro equipo contactate con nosotros a dracul@gmail.com.'
         },
     },
     en:{
@@ -118,22 +122,26 @@ export default{
             userModuleTitle:"User Module",
             userModuleDescription:"It provides models, services, components and pages for the management and authentication of the application users. It has a stateless approach handling authentication through JWT and implements RBAC (Role Based Access Control) for the management of roles and permissions.",
             customizeModuleTitle:"Customization Module",
-            customizeModuleDescription:"Provee funcionalidades para personalizar ciertos aspectos de la página como sus colores, logo, e idioma.",
+            customizeModuleDescription:"It provides functionalities to customize certain aspects of the page. It consists of components that allow you to modify the colors, logo, select language and title of the platform from a panel.",
             commonModuleTitle:"Common Module",
             commonModuleDescription:"This module is based on the creation of basic and reusable components for all platforms. They work as the basis for the most common and essential functionalities of any type of application.",
             queueModuleTitle:"Queue Module",
-            queueModuleDescription:"Provee un servicio de colas sobre mongodb.",
+            queueModuleDescription:"Provides a javascript queuing service supported on mongodb and mongoose. It also allows you to view the statistics of each worker added to the queue. The statistics are the tasks added, pending, obtained and taken.",
             mediaModuleTitle:"Media Module",
-            mediaModuleDescription:"Provee un servicio de gestión de archivos multimedia para gestionar archivos (Imagenes, Audio, Video, Texto, etc)",
+            mediaModuleDescription:"Provides a multimedia file management service to manage files (Images, Audio, Video, Text, etc.)",
             notificationModuleTitle:"Notification Module",
-            notificationModuleDescription:"Provee un servicio de notificaciones de usuario utilizando graphql subscriptions + websocket",
+            notificationModuleDescription:"This module allows you to create and manage customizable notifications for any action in your project. Provide a user notification service using graphql subscriptions + websocket",
             loggerModuleTitle:"Logger Module",
-            loggerModuleDescription:"Provee loggers de Winston pre-configurados y adaptados al stack tecnológico",
+            loggerModuleDescription:"The Dracul Logger Module provides a series of pre-assembled, ready-to-use Winston loggers. Options can be set from environment variables.",
             moreInfo: "More Info"
                 },
         teams:{
             team: "Our Crew",
             ourTeam1: 'Our team is made up of the best developers,',
             ourTeam2: ' full of energy and enthusiasm to face any project.'
+        },
+        support:{
+            title: "Need help? Did you find something and want to collaborate with us?",
+            subtitle: 'If when using our modules you encountered a problem and need help, or, you found an issue in our modules, do not hesitate to report it on the following platforms so we can review them. To be part of our team, contact us at dracul@gmail.com.'
         },
     }}

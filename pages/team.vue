@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <v-container class="mx-0 pa-0" max-width="100%" mx-0 pa-0>
     <div>
-      <v-container >
+      <v-container class="mx-0 pa-0" max-width="100%" mx-0 pa-0>
         <v-row  class="mb-12 grey darken-1 "> 
           <v-col class="pato pb-0" cols="12">
             <v-img src="/team/nuestroeq.svg" height="350px" contain class="pb-0 align-center">
@@ -57,7 +57,7 @@
             </v-card>
         </v-container>
     </div>
-    </div>
+  </v-container>
 </template>
 <script>
 export default {
@@ -105,11 +105,11 @@ export default {
   }
 }
 </script>
-<style>
+<style >
 .container{
-  margin-left: 0%;
-  margin-right: 0%;
+  margin: 0px;  
+  padding: 0px;
   max-width: 100%;
-  padding: 0%;
+  background-color: rgba(58, 55, 55, 0.137);
 }
 </style>

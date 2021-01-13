@@ -11,9 +11,9 @@ export default {
 </script>
 <style >
 .container{
-  margin: 0px;
+  margin: 0px;  
   padding: 0px;
   max-width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(58, 55, 55, 0.137);
 }
 </style>

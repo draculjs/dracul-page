@@ -112,6 +112,12 @@ export default {
 }
 </script>
 <style>
+.container{
+  margin: 0px;  
+  padding: 0px;
+  max-width: 100%;
+  background-color: rgba(58, 55, 55, 0.137);
+}
 .section{
   font-size: 70px;
   margin: 20px;

@@ -1,5 +1,5 @@
 <template>
- <v-container>
+ <v-container class="secondary">
   <v-card class="grey darken-2 bg" height="250px" elevation="0"></v-card>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
@@ -119,13 +119,10 @@ export default {
 
 <style>
 .container{
-  margin: 0px;
+  margin: 0px;  
   padding: 0px;
   max-width: 100%;
   background-color: rgba(58, 55, 55, 0.137);
-}
-main{
-  background-color:rgba(141, 137, 137, 0.137);
 }
 .section{
   font-size: 70px;

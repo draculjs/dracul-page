@@ -1,7 +1,7 @@
 # Logger Module
 
 Dracul Logger Module provide several winston logger configurations and factories ready to use.
-Environment variables 
+Options can be set from environment variables.
 
 ## This module allows:
 
