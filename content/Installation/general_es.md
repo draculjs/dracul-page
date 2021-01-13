@@ -1,6 +1,7 @@
 # Instalación y Arranque del Proyecto
 
-# Dracul Scaffold
+## Dracul Scaffold
+
 proyecto base con SPA frontend y API backend con Grapqhql.
 
 Este scaffold depende los modulos frameowork Dracul
@@ -8,7 +9,7 @@ Este scaffold depende los modulos frameowork Dracul
 - Docker ready
 - Stateless
 
-## FRONTEND - SPA
+# FRONTEND - SPA
 
 ### Tecnologías
 - HTML, CSS, Javascript

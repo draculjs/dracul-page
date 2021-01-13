@@ -3,7 +3,7 @@
     <v-card class="justify-center transparent elevation-0 align-center mt-10 pa-5" width="100%">
       <v-card-title primary-title class=" justify-center">
         <div>
-          <h1 class="section">{{$t("modules.title")}}</h1>
+          <p class="section">{{$t("modules.title")}}</p>
         </div>
       </v-card-title>
     </v-card>
