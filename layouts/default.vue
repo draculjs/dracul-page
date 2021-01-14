@@ -72,7 +72,7 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer
+    <v-footer padless
       :absolute="!fixed"
       app
       class="pa-0"

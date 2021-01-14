@@ -5,17 +5,17 @@ Environment variables
 
 ## This module allows:
 
-- Differentiate logs by deciding the priority level.
-- The levels for logging logs from highest to lowest priority are:
-  - Energ
-  - Alert
-  - Crit
-  - Error 
-  - Warning
-  - Notice
-  - Info
-  - Debug
-- Allows you to define the log output format using the conveyor from the environment variables.
+1. 1) Differentiate logs by deciding the priority level.
+2. 2) The levels for logging logs from highest to lowest priority are:
+  - - -Energ
+  - - -Alert
+  - - -Crit
+  - - -Error 
+  - - -Warning
+  - - -Notice
+  - - -Info
+  - - -Debug
+3. 3) Allows you to define the log output format using the conveyor from the environment variables.
 
 ## Installation:
 ```

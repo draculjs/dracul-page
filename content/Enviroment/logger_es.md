@@ -5,17 +5,17 @@ Se pueden configurar las opciones desde las variables de entorno.
 
 ## Este módulo permite:
 
-- Diferenciar los logs decidiendo el nivel de prioridad.
-- Los niveles para registrar los logs de mayor a menor prioridad son:
-  - Emergencias (energ)
-  - Alerta (alert)
-  - Critico (crit)
-  - Error (error) 
-  - Warning (warning)
-  - Noticia (notice)
-  - Info (info)
-  - Debug (debug) 
-- Permite definir el formato de salida del log mediante el transportador desde las variables de entorno.
+1. 1) Diferenciar los logs decidiendo el nivel de prioridad.
+2. 2) Los niveles para registrar los logs de mayor a menor prioridad son:
+  - - -Emergencias (energ)
+  - - -Alerta (alert)
+  - - -Critico (crit)
+  - - -Error (error) 
+  - - -Warning (warning)
+  - - -Noticia (notice)
+  - - -Info (info)
+  - - -Debug (debug)
+3. 3) Permite definir el formato de salida del log mediante el transportador desde las variables de entorno.
 
 ## Instalación:
 ```
