@@ -78,7 +78,7 @@
       class="pa-0"
       color= "transparent"
     >
-    <v-container class="mt-5 secondary maxw">
+    <!-- <v-container class="mt-5 secondary maxw">
       <v-row >
         <v-col cols="4">
           <v-card class="transparent" elevation="0">
@@ -124,7 +124,7 @@
         </v-col>
       </v-row>
       <v-divider></v-divider>
-    </v-container>
+    </v-container> -->
       <span class="ml-2">&copy; 2020 All rights reserved</span>
       <v-switch
       class="ml-5"

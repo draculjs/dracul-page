@@ -35,7 +35,7 @@ import {QUEUE_SHOW} from "@dracul/queue-backend/lib/permissions"
 
 - queueStats: devuelve un array de workers con los trabajos en cada estado pertenecientes a una cola
 
-```js
+```graphql endpoint
 queueStats: [QueueStats]
 
 QueueStats{
@@ -47,9 +47,63 @@ QueueStats{
 }
 ```
 
+**Datos que retorna el servicio**
+Retorna un Array del type QueueStats. Este type contiene:
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Tipo</th>
+    <th>Descripcion</th>
+  </tr>
+  <tr>
+    <td>topic</td>
+    <td>String</td>
+    <td>Topico del worker que esta en proceso</td>
+  </tr>
+  <tr>
+    <td>added</td>
+    <td>Int</td>
+    <td>Cantidad de tareas agregadas al worker</td>
+  </tr>
+  <tr>
+    <td>gotten</td>
+    <td>Int</td>
+    <td>Cantidad de tareas tomadas en el worker</td>
+  </tr>
+  <tr>
+    <td>failed</td>
+    <td>Int</td>
+    <td>Cantidad de tareas que fallaron en el worker</td>
+  </tr>
+  <tr>
+    <td>done</td>
+    <td>Int</td>
+    <td>Cantidad de tareas finalizadas en el worker</td>
+  </tr>
+  <tr>
+</table>
+---
+
 - queues: devuelve un array de workers con su informacion correspondiente 
 
-```js
+```graphql endpoint
 queues: [Queue]
 
 type Queue{
@@ -63,6 +117,85 @@ type Queue{
     error: String
 }
 ```
+
+**Datos que retorna el servicio**
+Retorna un Array del type Queue. Este type contiene:
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Typo</th>
+    <th>Descripcion</th>
+  </tr>
+  <tr>
+    <td>blockedUntil</td>
+    <td>String</td>
+    <td>Fecha de retraso de ejecución</td>
+  </tr>
+  <tr>
+    <td>workerHostname</td>
+    <td>String</td>
+    <td>Nombre del worker que lo procesa</td>
+  </tr>
+  <tr>
+    <td>workerId</td>
+    <td>String</td>
+    <td>Identificador único del worker</td>
+  </tr>
+  <tr>
+    <td>retries</td>
+    <td>Int</td>
+    <td>cantidad de reintentos de ejecución</td>
+  </tr>
+  <tr>
+    <td>topic</td>
+    <td>String</td>
+    <td>topico de la tarea</td>
+  </tr>
+  <tr>
+    <td>payload</td>
+    <td>String</td>
+    <td>Contenido de la tarea</td>
+  </tr>
+  <tr>
+    <td>done</td>
+    <td>Boolean</td>
+    <td>'true' si la tarea fue exitosa, caso contrario la tarea falló </td>
+  </tr>
+  <tr>
+    <td>icon</td>
+    <td>String</td>
+    <td>icono de la tarea </td>
+  </tr>
+  <tr>
+    <td>error</td>
+    <td>String</td>
+    <td>descripción del error si ocurre </td>
+  </tr>
+</table> 
+---
+
+
+### Recomendacion
+Se aconseja utilizar scafol dónde tenés todos los módulos ya integrados y link de scafold
+
+https://github.com/draculjs/scaffold
 
 
 <!-- MARKDOWN LINKS & IMAGES -->

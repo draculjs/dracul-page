@@ -1,7 +1,6 @@
 <template>
-<div class="white">
-  <article class="mx-5 white">
-    <h1>Installation</h1>
+<div class="error">
+  <article class="mx-5 error">
     <nuxt-content :document="install" />
   </article>
 </div>
@@ -20,3 +19,11 @@ export default {
   }
 }
 </script>
+<style>
+.container{
+  margin: 0px;  
+  padding: 0px;
+  max-width: 100%;
+  background-color: rgba(58, 55, 55, 0.137);
+}
+</style>

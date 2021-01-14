@@ -3,7 +3,7 @@
     <v-card class="justify-center transparent elevation-0 align-center mt-10 pa-5" width="100%">
       <v-card-title primary-title class=" justify-center">
         <div>
-          <h1 class="section">{{$t("modules.title")}}</h1>
+          <p class="section">{{$t("modules.title")}}</p>
         </div>
       </v-card-title>
     </v-card>
@@ -112,6 +112,12 @@ export default {
 }
 </script>
 <style>
+.container{
+  margin: 0px;  
+  padding: 0px;
+  max-width: 100%;
+  background-color: rgba(58, 55, 55, 0.137);
+}
 .section{
   font-size: 70px;
   margin: 20px;

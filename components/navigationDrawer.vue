@@ -3,7 +3,10 @@
       v-model="drawer"
       :clipped="clipped"
       fixed
+      color="secondary"
       app
+      floating
+      permanent
     >
     <v-list>
         <v-list-item
@@ -126,8 +129,8 @@ export default {
             title: 'Logger',
             items:[
                 {
-                    title: "Logger",
-                    to: '/docs/enviroment/logger'+'_'+this.$store.getters.getLanguage
+                    title: "Documentation",
+                    to: '/docs/docFrontend/logger'+'_'+this.$store.getters.getLanguage
                 }
               ],
               active: false,
